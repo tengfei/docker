@@ -1,3 +1,9 @@
-FROM: rocker/r-base
+FROM rocker/r-base
 
-ADD
+MAINTAINER "Tengfei Yin" yintengfei@gmail.com
+
+ADD https://raw.githubusercontent.com/tengfei/docker/master/runif/src/runif.R /usr/local/bin/
+
+RUN chown root:staff /usr/local/bin/runif.R \
+    && chmod 777 /usr/local/bin/runif.R
+
