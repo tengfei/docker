@@ -1,0 +1,140 @@
+{
+  "id": "#runif",
+  "inputs": [
+    {
+      "type": ["int"],
+      "label": "number",
+      "description": "number of observations",
+      "streamable": false,
+      "default": 1,
+      "id": "#number",
+      "inputBinding": {
+        "loadContents": [],
+        "position": 0,
+        "prefix": "--n",
+        "separate": true,
+        "itemSeparator": ""
+      }
+    },
+    {
+      "type": ["float"],
+      "label": "min",
+      "description": "lower limits of the distribution",
+      "streamable": false,
+      "default": 0,
+      "id": "#min",
+      "inputBinding": {
+        "loadContents": [],
+        "position": 0,
+        "prefix": "--min",
+        "separate": true,
+        "itemSeparator": ""
+      }
+    },
+    {
+      "type": ["float"],
+      "label": "max",
+      "description": "upper limits of the distribution",
+      "streamable": false,
+      "default": 1,
+      "id": "#max",
+      "inputBinding": {
+        "loadContents": [],
+        "position": 0,
+        "prefix": "--max",
+        "separate": true,
+        "itemSeparator": ""
+      }
+    },
+    {
+      "type": ["float"],
+      "label": "seed",
+      "description": "seed with set.seed",
+      "streamable": false,
+      "default": 1,
+      "id": "#seed",
+      "inputBinding": {
+        "loadContents": [],
+        "position": 0,
+        "prefix": "--seed",
+        "separate": true,
+        "itemSeparator": ""
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "type": ["File"],
+      "label": "output",
+      "description": "random number file",
+      "streamable": false,
+      "default": "",
+      "id": "#random_file",
+      "outputBinding": {
+        "loadContents": [],
+        "glob": "*.txt",
+        "outputEval": {
+          "script": ""
+        }
+      }
+    },
+    {
+      "type": ["File"],
+      "label": "report_output",
+      "description": "report",
+      "streamable": false,
+      "default": "",
+      "id": "#report",
+      "outputBinding": {
+        "loadContents": [],
+        "glob": "*.html",
+        "outputEval": {
+          "script": ""
+        }
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "class": "DockerRequirement",
+      "dockerPull": "tengfei/runif",
+      "dockerLoad": "",
+      "dockerFile": "",
+      "dockerImageId": "",
+      "dockerOutputDirectory": ""
+    },
+    {
+      "class": "CpuRequirement",
+      "value": 1
+    },
+    {
+      "class": "MemRequirement",
+      "value": 1024
+    }
+  ],
+  "hints": {
+    "field": "hints",
+    "className": "ANY"
+  },
+  "label": "Random number generator",
+  "description": "Random number generator",
+  "class": "CommandLineTool",
+  "baseCommand": "runif.R",
+  "arguments": [
+    {
+      "loadContents": [],
+      "position": 0,
+      "prefix": "",
+      "separate": true,
+      "itemSeparator": "",
+      "valueFrom": ""
+    }
+  ],
+  "stdout": "out.txt",
+  "successCodes": [],
+  "temporaryFailCodes": [],
+  "permanentFailCodes": [],
+  "@context": "https://github.com/common-workflow-language/common-workflow-language/blob/draft-1/specification/tool-description.md",
+  "owner": [],
+  "contributor": []
+} 
