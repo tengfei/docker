@@ -23,7 +23,7 @@ if(opts$report){
     ## stop("not implemented yet")
     ## call this
     ## as.numeric(read.table(file = opts$out, header  = TRUE))
-    rmarkdown::render("~/report/report.Rmd", BiocStyle::html_document(toc = TRUE),
+    rmarkdown::render("/report/report.Rmd", BiocStyle::html_document(toc = TRUE),
            output_dir = ".")
 }
 

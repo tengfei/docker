@@ -32,7 +32,8 @@ code2 <- function(...) {
 ## Summary
 
 ```{r}
-r <- as.numeric(read.table(file = "~/random.txt", header  = TRUE))
+r <- read.table(file = "/random.txt", header  = TRUE)
+r <- r[, 1]
 summary(r)
 hist(r)
 ```
