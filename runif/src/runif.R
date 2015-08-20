@@ -17,6 +17,9 @@ r <- runif(n = as.integer(opts$n),
 
 write.table(r, file = "/report/random.txt", col.names = TRUE)
 
+## in order to output this file, do this duplicated thing
+write.table(r, file = "./random.txt", col.names = TRUE)
+## also output to .
 if(opts$report){
     ## generate report
     rmarkdown::render("/report/report.Rmd", BiocStyle::html_document(toc = TRUE),
