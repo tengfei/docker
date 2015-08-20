@@ -12,5 +12,5 @@ RUN Rscript -e 'source("https://bioconductor.org/biocLite.R");biocLite("BiocStyl
 
 RUN chown root:staff /usr/local/bin/runif.R \
     && chmod 777 /usr/local/bin/runif.R \
-    && chmod 777 /report/report.Rmd
+    && chmod -R 777 /report
 

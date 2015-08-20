@@ -15,7 +15,7 @@ r <- runif(n = as.integer(opts$n),
            min = as.numeric(opts$min), 
            max = as.numeric(opts$max))
 
-write.table(r, file = "/random.txt", col.names = TRUE)
+write.table(r, file = "/report/random.txt", col.names = TRUE)
 
 if(opts$report){
     ## generate report
