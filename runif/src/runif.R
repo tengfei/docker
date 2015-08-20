@@ -6,7 +6,6 @@ options:
  --min=<float>   lower limits of the distribution. Must be finite [default: 0].
  --max=<float>   upper limits of the distribution. Must be finite [default: 1].
  --seed=<float>  seed for set.seed() function [default: 1]
- --out=<file>    output file [default: ./random.txt]
  --report=<logic> generate report or not [default: TRUE]'  -> doc
 
 library(docopt)
@@ -16,7 +15,7 @@ r <- runif(n = as.integer(opts$n),
            min = as.numeric(opts$min), 
            max = as.numeric(opts$max))
 
-write.table(r, file = opts$out, col.names = TRUE)
+write.table(r, file = "./random.txt", col.names = TRUE)
 
 if(opts$report){
     ## generate report

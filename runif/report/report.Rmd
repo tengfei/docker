@@ -1,5 +1,5 @@
 ---
-title: "Easy API: A user-friendly cascading API"
+title: "Uniform randome number generator example"
 output:
   BiocStyle::html_document:
     toc: true
@@ -32,7 +32,7 @@ code2 <- function(...) {
 ## Summary
 
 ```{r}
-r <- read.table(file = "/random.txt", header  = TRUE)
+r <- read.table(file = "./random.txt", header  = TRUE)
 r <- r[, 1]
 summary(r)
 hist(r)
