@@ -15,15 +15,12 @@ r <- runif(n = as.integer(opts$n),
            min = as.numeric(opts$min), 
            max = as.numeric(opts$max))
 
-write.table(r, file = "./random.txt", col.names = TRUE)
+write.table(r, file = "/random.txt", col.names = TRUE)
 
 if(opts$report){
     ## generate report
-    ## stop("not implemented yet")
-    ## call this
-    ## as.numeric(read.table(file = opts$out, header  = TRUE))
     rmarkdown::render("/report/report.Rmd", BiocStyle::html_document(toc = TRUE),
-           output_dir = ".")
+                      output_dir = ".")
 }
 
 
