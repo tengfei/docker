@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-'usage: runif.R [--n=<int> --min=<float> --max=<float> --seed=<float> --out=<file>]
+'usage: runif.R [--n=<int> --min=<float> --max=<float> --seed=<float> --report=<logic>]
 
 options:
  --n=<int>        number of observations. If length(n) > 1, the length is taken to be the number required [default: 1].
